@@ -3,7 +3,7 @@
         background-color: rgb(247, 247, 247);
     }
     
-    main {
+    .content {
         height: 100vh;
     }
     
@@ -17,6 +17,10 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+        position: sticky;
+        background-color: white;
+        top: 0;
+        z-index: 1;
         cursor: pointer;
         border-bottom: 1px solid;
         border-color: rgb(149, 149, 149);
@@ -74,6 +78,13 @@
         border: 2px solid #cd2c86;
     }
     /*Vorschläge für dich*/
+    /*Großer Container für die Vorschläge*/
+    
+    .containerSuggestions {
+        position: absolute;
+        right: 50px;
+    }
+    /*User Name und Bild*/
     
     .headerSuggestions {
         padding-right: 200px;
@@ -85,6 +96,7 @@
     .userName {
         margin-left: 28px;
     }
+    /*Überschrift Vorschläge für dich*/
     
     .overlineSuggestion {
         padding-right: 270px;
@@ -92,6 +104,7 @@
         align-items: center;
         justify-content: flex-end;
     }
+    /*Vorgeschlagene Accounts und Follow Button*/
     
     .suggestions {
         padding-right: 128px;
@@ -122,6 +135,30 @@
         object-fit: cover;
         margin-top: 16px;
     }
+    /*Posts*/
+    
+    .postImg {
+        height: 350px;
+        width: 200px;
+        object-fit: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .overlayPost {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        margin-left: 150px;
+    }
+    
+    .onePost {
+        border: 2px solid #a4a4a4;
+        height: 500px;
+        width: 300px;
+    }
     /*Footer*/
     
     footer {
@@ -131,6 +168,7 @@
         padding: 80px;
         height: 150px;
         background-color: #d3d3d3;
+        bottom: 0;
     }
     
     a {

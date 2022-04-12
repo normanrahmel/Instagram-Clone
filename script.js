@@ -1,24 +1,39 @@
 let posts = [{
         'author': 'Tagesschau',
-        'image': '',
+        'image': 'img/likejpg.jpg',
         'description': 'Test 1',
         'location': 'München'
     },
     {
         'author': 'Tagesschau',
-        'image': '',
+        'image': 'img/Bild5.jpg',
         'description': 'Test 1',
         'location': 'München'
     },
     {
         'author': 'Tagesschau',
-        'image': '',
+        'image': 'img/Bild7.jpg',
         'description': 'Test 1',
         'location': 'München'
     },
     {
         'author': 'Tagesschau',
-        'image': '',
+        'image': 'img/scoialnetwork.jpg',
+        'description': 'Test 1',
+        'location': 'München'
+    }, {
+        'author': 'Tagesschau',
+        'image': 'img/Bild3.jpg',
+        'description': 'Test 1',
+        'location': 'München'
+    }, {
+        'author': 'Tagesschau',
+        'image': 'img/Bild2.jpg',
+        'description': 'Test 1',
+        'location': 'München'
+    }, {
+        'author': 'Tagesschau',
+        'image': 'img/Bild1.jpg',
         'description': 'Test 1',
         'location': 'München'
     }
@@ -26,19 +41,24 @@ let posts = [{
 ];
 
 function showhPosts() {
-    document.getElementById('containerPosts').innerHTML = "";
+    let containerPosts = document.getElementById('containerPosts')
+    containerPosts.innerHTML = "";
     for (let i = 0; i < posts.length; i++) {
         const post = posts[i];
-        document.getElementById('containerPosts').innerHTML += templateShowPosts();
+        containerPosts.innerHTML += templateShowPosts(post);
     }
 
 }
 
 function templateShowPosts(post) {
     return /*html*/ `
-    <div>
-        <img src="${post['image']}">
+    <div class="overlayPost">
+        <div class="onePost">
         <div>${post['author']}</div>
+        <div>${post['location']}</div>
+        <img class="postImg" src="${post['image']}">
+        <div>${post['description']}</div>
+        </div>
     </div>
     `;
 }
