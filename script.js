@@ -1,41 +1,41 @@
 let posts = [{
-        'author': 'Tagesschau',
+        'author': 'Instagram',
         'image': 'img/likejpg.jpg',
         'description': 'Test 1',
-        'location': 'München'
+        'location': 'Berlin'
     },
     {
-        'author': 'Tagesschau',
+        'author': 'Business Insider',
         'image': 'img/Bild5.jpg',
         'description': 'Test 1',
-        'location': 'München'
+        'location': 'London'
     },
     {
-        'author': 'Tagesschau',
+        'author': 'New York Times',
         'image': 'img/Bild7.jpg',
         'description': 'Test 1',
-        'location': 'München'
+        'location': 'New York'
     },
     {
-        'author': 'Tagesschau',
+        'author': 'The-Social-Network',
         'image': 'img/scoialnetwork.jpg',
         'description': 'Test 1',
-        'location': 'München'
+        'location': 'silicon valley'
     }, {
-        'author': 'Tagesschau',
+        'author': 'Nature-lakes',
         'image': 'img/Bild3.jpg',
         'description': 'Test 1',
-        'location': 'München'
+        'location': 'Montreal'
     }, {
-        'author': 'Tagesschau',
+        'author': 'Lakes_&_Mountains',
         'image': 'img/Bild2.jpg',
         'description': 'Test 1',
-        'location': 'München'
+        'location': 'Bali'
     }, {
-        'author': 'Tagesschau',
+        'author': 'Nature',
         'image': 'img/Bild1.jpg',
         'description': 'Test 1',
-        'location': 'München'
+        'location': 'Bremen'
     }
 
 ];
@@ -52,13 +52,13 @@ function showhPosts() {
 
 function templateShowPosts(post) {
     return /*html*/ `
-    <div class="overlayPost">
-        <div class="onePost">
-        <div>${post['author']}</div>
-        <div>${post['location']}</div>
-        <img class="postImg" src="${post['image']}">
-        <div>${post['description']}</div>
+
+        <div class="containerPost">
+            <div>${post['author']}</div>
+            <div>${post['location']}</div>
+            <img class="postImg" src="${post['image']}">
+            <div>${post['description']}</div>
         </div>
-    </div>
+    
     `;
 }

@@ -1,181 +1,211 @@
-    body {
-        margin: 0;
-        background-color: rgb(247, 247, 247);
-    }
-    
-    .content {
-        height: 100vh;
-    }
-    
-    .paddingLeftRight {
-        padding-left: 128px;
-        padding-right: 128px;
-    }
-    
-    .containerHeadingLine {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        position: sticky;
-        background-color: white;
-        top: 0;
-        z-index: 1;
-        cursor: pointer;
-        border-bottom: 1px solid;
-        border-color: rgb(149, 149, 149);
-    }
-    /*Icons*/
-    
-    .icons-profil {
-        width: 35px;
-        height: 35px;
-        margin-left: 8px;
-        margin-right: 8px;
-        border-radius: 100%;
-        object-fit: cover;
-    }
-    /*Instagram Schriftzug*/
-    
-    .overline {
-        width: 220px;
-        height: 120px;
-    }
-    /*Suchleiste*/
-    
-    .search [type=text] {
-        width: 250px;
-        height: 35px;
-        border-radius: 4px;
-        border: none;
-        background-color: rgb(220, 216, 216);
-    }
-    /*Story Container Position*/
-    
-    .storyPosition {
-        margin-left: 128px;
-        margin-top: 20px;
-    }
-    /*Storys*/
-    
-    .containerStorys {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        flex-direction: row;
-        border: 1px solid;
-        border-color: rgb(149, 149, 149);
-        text-align: center;
-        max-width: 800px;
-    }
-    
-    .iconsStory {
-        width: 65px;
-        height: 65px;
-        border-radius: 100%;
-        object-fit: cover;
-        margin-top: 16px;
-        border: 2px solid #cd2c86;
-    }
-    /*Vorschläge für dich*/
-    /*Großer Container für die Vorschläge*/
-    
-    .containerSuggestions {
-        position: absolute;
-        right: 50px;
-    }
-    /*User Name und Bild*/
-    
-    .headerSuggestions {
-        padding-right: 200px;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-    }
-    
-    .userName {
-        margin-left: 28px;
-    }
-    /*Überschrift Vorschläge für dich*/
-    
-    .overlineSuggestion {
-        padding-right: 270px;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-    }
-    /*Vorgeschlagene Accounts und Follow Button*/
-    
-    .suggestions {
-        padding-right: 128px;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        flex-direction: column;
-    }
-    
-    .contentSuggestions {
-        width: 270px;
-        flex-direction: row;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        word-wrap: break-word;
-    }
-    
-    .contentSuggestions button {
-        background-color: #4aa8f7;
-        color: white;
-    }
-    
-    .iconsSuggestions {
-        width: 65px;
-        height: 65px;
-        border-radius: 100%;
-        object-fit: cover;
-        margin-top: 16px;
-    }
-    /*Posts*/
-    
-    .postImg {
-        height: 350px;
-        width: 200px;
-        object-fit: cover;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .overlayPost {
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        flex-direction: column;
-        margin-left: 150px;
-    }
-    
-    .onePost {
-        border: 2px solid #a4a4a4;
-        height: 500px;
-        width: 300px;
-    }
-    /*Footer*/
-    
-    footer {
-        align-items: center;
-        justify-content: space-evenly;
-        display: flex;
-        padding: 80px;
-        height: 150px;
-        background-color: #d3d3d3;
-        bottom: 0;
-    }
-    
-    a {
-        text-decoration: none;
-        color: black;
-    }
-    
-    a:hover {
-        text-decoration: underline;
-    }
+body {
+    margin: 0;
+    background-color: rgb(247, 247, 247);
+}
+
+.content {
+    height: 100vh;
+}
+
+.paddingLeftRight {
+    padding-left: 128px;
+    padding-right: 128px;
+}
+
+.containerHeadingLine {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    background-color: white;
+    top: 0;
+    z-index: 1;
+    cursor: pointer;
+    border-bottom: 1px solid;
+    border-color: rgb(149, 149, 149);
+}
+
+
+/*Icons*/
+
+.icons-profil {
+    width: 35px;
+    height: 35px;
+    margin-left: 8px;
+    margin-right: 8px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+
+/*Instagram Schriftzug*/
+
+.overline {
+    width: 220px;
+    height: 120px;
+}
+
+
+/*Suchleiste*/
+
+.search [type=text] {
+    width: 250px;
+    height: 35px;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(220, 216, 216);
+}
+
+
+/*Story Container Position*/
+
+.storyPosition {
+    margin-left: 128px;
+    margin-top: 20px;
+}
+
+
+/*Storys*/
+
+.containerStorys {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    border: 1px solid;
+    border-color: rgb(149, 149, 149);
+    text-align: center;
+    max-width: 800px;
+}
+
+.iconsStory {
+    width: 65px;
+    height: 65px;
+    border-radius: 100%;
+    object-fit: cover;
+    margin-top: 16px;
+    border: 2px solid #cd2c86;
+}
+
+
+/*Vorschläge für dich*/
+
+
+/*Großer Container für die Vorschläge*/
+
+.containerSuggestions {
+    position: absolute;
+    right: 50px;
+}
+
+
+/*User Name und Bild*/
+
+.headerSuggestions {
+    padding-right: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.userName {
+    margin-left: 28px;
+}
+
+
+/*Überschrift Vorschläge für dich*/
+
+.overlineSuggestion {
+    padding-right: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+/*Vorgeschlagene Accounts und Follow Button*/
+
+.suggestions {
+    padding-right: 128px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contentSuggestions {
+    width: 270px;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    word-wrap: break-word;
+}
+
+.contentSuggestions button {
+    background-color: #4aa8f7;
+    color: white;
+}
+
+.iconsSuggestions {
+    width: 65px;
+    height: 65px;
+    border-radius: 100%;
+    object-fit: cover;
+    margin-top: 16px;
+}
+
+
+/*Posts*/
+
+
+/*div wo der JS Code Reingepusht wird*/
+
+#containerPosts {
+    margin-left: 350px;
+    margin-top: 32px;
+}
+
+
+/*Der für einen Post Container Post*/
+
+.containerPost {
+    border: 2px solid #7a7a7a;
+    height: 500px;
+    width: 400px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.postImg {
+    height: 350px;
+    width: 200px;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*Footer*/
+
+footer {
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+    padding: 80px;
+    height: 150px;
+    background-color: #d3d3d3;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
