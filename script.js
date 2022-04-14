@@ -54,9 +54,27 @@ function templateShowPosts(post) {
     return /*html*/ `
 
         <div class="containerPost">
-            <div>${post['author']}</div>
-            <div>${post['location']}</div>
-            <img class="postImg" src="${post['image']}">
+
+            <div class="headerPost" >
+                <img class="iconsPost"  src="${post['image']}" alt="">
+                <h4>${post['author']}</h4>
+            </div>
+
+            <div class="locationPost">
+                   <h5> ${post['location']}</h5>
+            </div>
+
+            <div class="postImg">
+                <img src="${post['image']}">
+            </div>
+
+            <div class="likeCommentSection">
+                <img src="img/icons/heart.png">
+                <img src="img/icons/arrowpng.png">
+                <img src="img/icons/comments.png">
+                <img src="img/icons/save.png">
+            </div>
+
             <div>${post['description']}</div>
         </div>
     

@@ -3,10 +3,6 @@ body {
     background-color: rgb(247, 247, 247);
 }
 
-.content {
-    height: 100vh;
-}
-
 .paddingLeftRight {
     padding-left: 128px;
     padding-right: 128px;
@@ -163,30 +159,70 @@ body {
 /*div wo der JS Code Reingepusht wird*/
 
 #containerPosts {
-    margin-left: 350px;
+    margin-left: 250px;
     margin-top: 32px;
-}
-
-
-/*Der für einen Post Container Post*/
-
-.containerPost {
-    border: 2px solid #7a7a7a;
-    height: 500px;
-    width: 400px;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
 }
 
-.postImg {
-    height: 350px;
-    width: 200px;
+
+/*Der für einen Post Container Post*/
+
+.containerPost {
+    border: 1px solid #b2b2b2;
+    border-radius: 2px;
+    height: 700px;
+    width: 600px;
+    margin-bottom: 28px;
+    flex-direction: column;
+    display: flex;
+}
+
+.iconsPost {
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
     object-fit: cover;
+    margin-right: 20px;
+}
+
+.headerPost {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 8px;
+}
+
+.locationPost {
+    align-items: flex-start;
+    display: flex;
+    padding: 8px;
+}
+
+.postImg {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.postImg img {
+    height: 500px;
+    width: 600px;
+    object-fit: cover;
+}
+
+.likeCommentSection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.likeCommentSection img {
+    height: 40px;
+    width: 40px;
+    padding: 8px;
 }
 
 
