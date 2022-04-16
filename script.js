@@ -96,7 +96,7 @@ function templateShowPosts(post, i) {
                 <img src="img/icons/save.png">
             </div>
             <div class="sectionLikes">
-                <h5> ${post['likes']} likes</h5>
+                <h5 id="likesPlus"> ${post['likes']} likes</h5>
             </div>
             <div class="descriptionPost">${post['description']}</div>
             
@@ -110,12 +110,29 @@ function templateShowPosts(post, i) {
 }
 
 function like(i) {
-    document.getElementById(`iconLike${i}`).src = 'img/icons/red.png';
-    document.getElementById(`iconLike${i}`).innerHTML = posts[i].likes + 1;
+    if (document.getElementById(`iconLike${i}`).src.endsWith('img/icons/red.png')) {
+        document.getElementById(`iconLike${i}`).src = 'img/icons/heart.png';
+    } else {
+        document.getElementById(`iconLike${i}`).src = 'img/icons/red.png';
+        document.getElementById(`likesPlus${i}`).innerHTML = posts[i].likes + 1;
+    }
+
+    showhPosts();
+}
+/*
+function addComment(post, i) {
+    let userComment = document.getElementById('userComment' + i);
+    if (userComment.value == "") {
+        posts[i].comments.push(userComment.value);
+    } else {
+        alert('Bitte einen Kommentar eingeben');
+    }
+
 }
 
-function addComment(post, i) {
-    let userComment = document.getElementById(`userComment${i}`).value;
-    //comments.push(userComment.value);
-    posts[i]['comments'].push(userComment.value);
-}
+if (document.getElementById(`iconLike${i}`).src.endsWith(img / icons / red.png)) {
+        document.getElementById(`iconLike${i}`).src.endsWith(img / icons / heart.png)
+    } else {
+        document.getElementById(`iconLike${i}`).src.endsWith(img / icons / red.png)
+    }
+*/
