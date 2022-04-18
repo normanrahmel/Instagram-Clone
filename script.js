@@ -60,6 +60,7 @@ let posts = [{
     }
 
 ];
+let loggedAuthor = 'Affe_der_Nation'
 
 function showhPosts() {
     let containerPosts = document.getElementById('containerPosts')
@@ -71,7 +72,7 @@ function showhPosts() {
 
 }
 
-function templateShowPosts(post, i) {
+function templateShowPosts(post, i, j) {
     return /*html*/ `
 
         <div class="containerPost">
@@ -96,43 +97,74 @@ function templateShowPosts(post, i) {
                 <img src="img/icons/save.png">
             </div>
             <div class="sectionLikes">
-                <h5 id="likesPlus"> ${post['likes']} likes</h5>
+                <h5 id="likesPlus${i}"> ${post['likes']} likes</h5>
             </div>
             <div class="descriptionPost">${post['description']}</div>
             
             <div class="input-group mb-3 inputPost">
                 <img src="img/icons/emoticon.png">
-                <input id="userComment${i}" class="commentInput" type="text" class="form-control" placeholder="Kommentar" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <input id="commentInput${j}" class="commentInput form-control" type="text" placeholder="Kommentar" aria-label="Recipient's username" aria-describedby="button-addon2">
                 <button class="btn btn-outline-secondary postButton" type="button" id="button-addon2${i}">Post</button>
             </div>
         <div>            
     `;
 }
 
+
+//Like-Section
 function like(i) {
     if (document.getElementById(`iconLike${i}`).src.endsWith('img/icons/red.png')) {
         document.getElementById(`iconLike${i}`).src = 'img/icons/heart.png';
+        document.getElementById(`likesPlus${i}`).innerHTML = posts[i].likes - 1;
+        showhPosts();
     } else {
+        showhPosts();
         document.getElementById(`iconLike${i}`).src = 'img/icons/red.png';
         document.getElementById(`likesPlus${i}`).innerHTML = posts[i].likes + 1;
     }
+}
 
+
+// comment Section
+
+function postComment(j) {
+    let com = document.getElementById(`commentInput${j}`);
+
+    if (com.value.length == 0) {
+        alert('Bitte Text eingeben');
+    } else {
+        posts[j].comments.push(com.value);
+        save();
+        com.value = ``;
+    }
     showhPosts();
 }
-/*
-function addComment(post, i) {
-    let userComment = document.getElementById('userComment' + i);
-    if (userComment.value == "") {
-        posts[i].comments.push(userComment.value);
-    } else {
-        alert('Bitte einen Kommentar eingeben');
-    }
 
+function generateComments(j) {
+    let htmlCode = '';
+
+    for (let i = 0; i < posts[j].comments.length; i++) {
+        htmlCode += `
+        <div class="article-direction">
+        <span><b>${loggedAuthor}</b></span>  <span>${posts[j].comments[i]}</span>
+        </div>
+        `
+    }
+    return htmlCode;
 }
 
-if (document.getElementById(`iconLike${i}`).src.endsWith(img / icons / red.png)) {
-        document.getElementById(`iconLike${i}`).src.endsWith(img / icons / heart.png)
-    } else {
-        document.getElementById(`iconLike${i}`).src.endsWith(img / icons / red.png)
-    }
-*/
+// save at local storage
+
+function save() {
+    let postsAsText = JSON.stringify(posts);
+    // hier Speicher ich mein JSON im loacal Storage
+    localStorage.setItem('comments', postsAsText);
+}
+
+// load from local Storage
+
+function load() {
+    let postsAsText = localStorage.getItem('comments', posts);
+
+    if (postsAsText) { posts = JSON.parse(postsAsText); }
+}
