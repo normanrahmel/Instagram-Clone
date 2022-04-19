@@ -4,7 +4,6 @@ let posts = [{
         'description': '<b>Instagram</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
         'location': 'Berlin',
         'likes': 13,
-        'isLiked': false,
         'comments': []
     },
     {
@@ -13,7 +12,6 @@ let posts = [{
         'description': '<b>Business Insider</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
         'location': 'London',
         'likes': 8665,
-        'isLiked': false,
         'comments': []
     },
     {
@@ -22,7 +20,6 @@ let posts = [{
         'description': '<b>New York Times</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
         'location': 'New York',
         'likes': 2665,
-        'isLiked': false,
         'comments': []
     },
     {
@@ -31,7 +28,6 @@ let posts = [{
         'description': '<b>The-Social-Network</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
         'location': 'Silicon-Valley',
         'likes': 153,
-        'isLiked': false,
         'comments': []
     }, {
         'author': 'Nature-lakes',
@@ -39,7 +35,6 @@ let posts = [{
         'description': '<b>Nature-lakes</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
         'location': 'Montreal',
         'likes': 2513,
-        'isLiked': false,
         'comments': []
     }, {
         'author': 'Lakes_&_Mountains',
@@ -47,7 +42,6 @@ let posts = [{
         'description': '<b>Lakes_&_Mountains</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
         'location': 'Bali',
         'likes': 3,
-        'isLiked': false,
         'comments': []
     }, {
         'author': 'Nature',
@@ -55,12 +49,11 @@ let posts = [{
         'description': '<b>Nature Lorem</b> ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
         'location': 'Bremen',
         'likes': 13534,
-        'isLiked': false,
         'comments': []
     }
 
 ];
-let loggedAuthor = 'Affe_der_Nation'
+let postAuthor = 'User101';
 
 function showhPosts() {
     let containerPosts = document.getElementById('containerPosts')
@@ -72,7 +65,7 @@ function showhPosts() {
 
 }
 
-function templateShowPosts(post, i, j) {
+function templateShowPosts(post, i) {
     return /*html*/ `
 
         <div class="containerPost">
@@ -101,10 +94,15 @@ function templateShowPosts(post, i, j) {
             </div>
             <div class="descriptionPost">${post['description']}</div>
             
+            <div class="article-comment-section">
+            <div class="article-comments" >
+                ${generateComments(post)}
+            </div>
+            
             <div class="input-group mb-3 inputPost">
                 <img src="img/icons/emoticon.png">
-                <input id="commentInput${j}" class="commentInput form-control" type="text" placeholder="Kommentar" aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary postButton" type="button" id="button-addon2${i}">Post</button>
+                <input id="commentInput${i}" class="commentInput form-control" type="text" placeholder="Kommentar" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button onclick= "postComment(${i})" class="btn btn-outline-secondary postButton" type="button" id="button-addon2${i}">Post</button>
             </div>
         <div>            
     `;
@@ -127,26 +125,26 @@ function like(i) {
 
 // comment Section
 
-function postComment(j) {
-    let com = document.getElementById(`commentInput${j}`);
+function postComment(i) {
+    let com = document.getElementById(`commentInput${i}`);
 
     if (com.value.length == 0) {
         alert('Bitte Text eingeben');
     } else {
-        posts[j].comments.push(com.value);
+        posts[i].comments.push(com.value);
         save();
         com.value = ``;
     }
     showhPosts();
 }
 
-function generateComments(j) {
+function generateComments(post) {
     let htmlCode = '';
 
-    for (let i = 0; i < posts[j].comments.length; i++) {
+    for (let i = 0; i < post.comments.length; i++) {
         htmlCode += `
         <div class="article-direction">
-        <span><b>${loggedAuthor}</b></span>  <span>${posts[j].comments[i]}</span>
+        <span><b>${postAuthor}</b></span>  <span>${post.comments[i]}</span>
         </div>
         `
     }

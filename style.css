@@ -264,6 +264,10 @@ body {
     height: 25px;
 }
 
+.article-direction {
+    margin: 8px;
+}
+
 .postButton {
     background-color: white;
     border-radius: 4px;
