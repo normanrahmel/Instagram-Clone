@@ -172,15 +172,19 @@ function load() {
 
 function filterNames() {
     let search = document.getElementById('search').value;
+    let results = document.getElementById('results');
+
     search = search.toLowerCase();
+    results.innerHTML = '';
 
     for (let index = 0; index < posts.length; index++) {
-        let name = posts[index];
+        let name = posts[index]['author'];
 
-        if (name.toLowerCase().includes(search))
-            names.innerHTML += /*html*/ `
+        if (name.toLowerCase().includes(search)) {
+            name.innerHTML += /*html*/ `
         <li>${name}</li>
         `;
+        }
     }
 }
 

@@ -18,7 +18,10 @@
             <img class="overline" src="img/icons/instagramSchrift.png">
 
             <form class="search" action="#">
-                <input id="search" onkeydown="filterNames()" type="text" placeholder="Suche" name="search">
+                <input autocomplete="off" id="search" onkeydown="filterNames()" type="text" placeholder="Suche" name="search">
+                <div class="resultContainer" id="results">
+
+                </div>
             </form>
 
             <div class="containerIcons ">
