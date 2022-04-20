@@ -1,296 +1,334 @@
-body {
-    margin: 0;
-    background-color: rgb(247, 247, 247);
-}
-
-.paddingLeftRight {
-    padding-left: 128px;
-    padding-right: 128px;
-}
-
-.containerHeadingLine {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky;
-    background-color: white;
-    top: 0;
-    z-index: 1;
-    cursor: pointer;
-    border-bottom: 1px solid;
-    border-color: rgb(149, 149, 149);
-}
-
-
-/*Icons*/
-
-.icons-profil {
-    width: 35px;
-    height: 35px;
-    margin-left: 8px;
-    margin-right: 8px;
-    border-radius: 100%;
-    object-fit: cover;
-}
-
-
-/*Instagram Schriftzug*/
-
-.overline {
-    width: 220px;
-    height: 120px;
-}
-
-
-/*Suchleiste*/
-
-.search [type=text] {
-    width: 250px;
-    height: 35px;
-    border-radius: 4px;
-    border: none;
-    background-color: rgb(220, 216, 216);
-}
-
-
-/*Story Container Position*/
-
-.storyPosition {
-    margin-left: 128px;
-    margin-top: 20px;
-}
-
-
-/*Storys*/
-
-.containerStorys {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: row;
-    border: 1px solid;
-    border-color: rgb(149, 149, 149);
-    text-align: center;
-    max-width: 800px;
-}
-
-.iconsStory {
-    width: 65px;
-    height: 65px;
-    border-radius: 100%;
-    object-fit: cover;
-    margin-top: 16px;
-    border: 2px solid #cd2c86;
-}
-
-
-/*Vorschläge für dich*/
-
-
-/*Großer Container für die Vorschläge*/
-
-.containerSuggestions {
-    position: absolute;
-    right: 50px;
-}
-
-
-/*User Name und Bild*/
-
-.headerSuggestions {
-    padding-right: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-.userName {
-    margin-left: 28px;
-}
-
-
-/*Überschrift Vorschläge für dich*/
-
-.overlineSuggestion {
-    padding-right: 270px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-
-/*Vorgeschlagene Accounts und Follow Button*/
-
-.suggestions {
-    padding-right: 128px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.contentSuggestions {
-    width: 270px;
-    flex-direction: row;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    word-wrap: break-word;
-}
-
-.contentSuggestions button {
-    background-color: #4aa8f7;
-    color: white;
-}
-
-.iconsSuggestions {
-    width: 65px;
-    height: 65px;
-    border-radius: 100%;
-    object-fit: cover;
-    margin-top: 16px;
-}
-
-
-/*Posts*/
-
-
-/*div wo der JS Code Reingepusht wird*/
-
-#containerPosts {
-    margin-left: 250px;
-    margin-top: 32px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-}
-
-
-/*Der für einen Post Container Post*/
-
-.containerPost {
-    border: 1px solid #b2b2b2;
-    border-radius: 2px;
-    height: 900px;
-    width: 600px;
-    margin-bottom: 28px;
-    flex-direction: column;
-    display: flex;
-}
-
-
-/*Profil Icon beim Post*/
-
-.iconsPost {
-    width: 35px;
-    height: 35px;
-    border-radius: 100%;
-    object-fit: cover;
-    margin-right: 20px;
-}
-
-.headerPost {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    padding: 8px;
-}
-
-.locationPost {
-    align-items: flex-start;
-    display: flex;
-    padding: 8px;
-}
-
-.postImg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.postImg img {
-    height: 500px;
-    width: 600px;
-    object-fit: cover;
-}
-
-.likeCommentSection {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.likeCommentSection img {
-    height: 55px;
-    width: 55px;
-    padding: 16px;
-}
-
-.likeHeart {
-    background-color: red;
-}
-
-.sectionLikes {
-    margin: 8px;
-}
-
-.descriptionPost {
-    margin: 8px;
-}
-
-.inputPost {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 450px;
-    margin: 8px;
-    border-radius: 4px;
-    background-color: white;
-}
-
-.commentInput {
-    border-radius: 4px;
-    border: none;
-    width: 300px
-}
-
-.inputPost img {
-    background-color: white;
-    border-radius: 100%;
-    margin-right: 10px;
-    width: 25px;
-    height: 25px;
-}
-
-.article-direction {
-    margin: 8px;
-}
-
-.postButton {
-    background-color: white;
-    border-radius: 4px;
-    color: #4aa8f7;
-}
-
-
-/*Footer*/
-
-footer {
-    align-items: center;
-    justify-content: space-evenly;
-    display: flex;
-    padding: 80px;
-    height: 150px;
-    background-color: #d3d3d3;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-}
-
-a:hover {
-    text-decoration: underline;
-}
+    body {
+        margin: 0;
+        background-color: rgb(247, 247, 247);
+    }
+    
+    .paddingLeftRight {
+        padding-left: 128px;
+        padding-right: 128px;
+    }
+    
+    .containerHeadingLine {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        background-color: white;
+        top: 0;
+        z-index: 1;
+        cursor: pointer;
+        border-bottom: 1px solid;
+        border-color: rgb(149, 149, 149);
+    }
+    /*Icons*/
+    
+    .icons-profil {
+        width: 35px;
+        height: 35px;
+        margin-left: 8px;
+        margin-right: 8px;
+        border-radius: 100%;
+        object-fit: cover;
+    }
+    /*Instagram Schriftzug*/
+    
+    .overline {
+        width: 220px;
+        height: 120px;
+    }
+    /*Suchleiste*/
+    
+    .search [type=text] {
+        width: 250px;
+        height: 35px;
+        border-radius: 4px;
+        border: none;
+        background-color: rgb(220, 216, 216);
+    }
+    /*Story Container Position*/
+    
+    .storyPosition {
+        margin-left: 128px;
+        margin-top: 20px;
+    }
+    /*Storys*/
+    
+    .containerStorys {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: row;
+        border: 1px solid;
+        border-color: rgb(149, 149, 149);
+        text-align: center;
+        max-width: 800px;
+    }
+    
+    .iconsStory {
+        width: 65px;
+        height: 65px;
+        border-radius: 100%;
+        object-fit: cover;
+        margin-top: 16px;
+        border: 2px solid #cd2c86;
+    }
+    /*Vorschläge für dich*/
+    /*Großer Container für die Vorschläge*/
+    
+    .containerSuggestions {
+        position: absolute;
+        right: 50px;
+    }
+    /*User Name und Bild*/
+    
+    .headerSuggestions {
+        padding-right: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    
+    .userName {
+        margin-left: 28px;
+    }
+    /*Überschrift Vorschläge für dich*/
+    
+    .overlineSuggestion {
+        padding-right: 270px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    /*Vorgeschlagene Accounts und Follow Button*/
+    
+    .suggestions {
+        padding-right: 128px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .contentSuggestions {
+        width: 270px;
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        word-wrap: break-word;
+    }
+    
+    .contentSuggestions button {
+        background-color: #4aa8f7;
+        color: white;
+    }
+    
+    .iconsSuggestions {
+        width: 65px;
+        height: 65px;
+        border-radius: 100%;
+        object-fit: cover;
+        margin-top: 16px;
+    }
+    /*Posts*/
+    /*div wo der JS Code Reingepusht wird*/
+    
+    #containerPosts {
+        margin-left: 250px;
+        margin-top: 32px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+    }
+    /*Der für einen Post Container Post*/
+    
+    .containerPost {
+        border: 1px solid #b2b2b2;
+        border-radius: 2px;
+        height: 900px;
+        width: 600px;
+        margin-bottom: 28px;
+        flex-direction: column;
+        display: flex;
+    }
+    /*Profil Icon beim Post*/
+    
+    .iconsPost {
+        width: 35px;
+        height: 35px;
+        border-radius: 100%;
+        object-fit: cover;
+        margin-right: 20px;
+    }
+    
+    .headerPost {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 8px;
+    }
+    
+    .locationPost {
+        align-items: flex-start;
+        display: flex;
+        padding: 8px;
+    }
+    
+    .postImg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .postImg img {
+        height: 500px;
+        width: 600px;
+        object-fit: cover;
+    }
+    
+    .likeCommentSection {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .likeCommentSection img {
+        height: 55px;
+        width: 55px;
+        padding: 16px;
+    }
+    
+    .likeHeart {
+        background-color: red;
+    }
+    
+    .sectionLikes {
+        margin: 8px;
+    }
+    
+    .descriptionPost {
+        margin: 8px;
+    }
+    
+    .inputPost {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 450px;
+        margin: 8px;
+        border-radius: 4px;
+        background-color: white;
+    }
+    
+    .commentInput {
+        border-radius: 4px;
+        border: none;
+        width: 300px
+    }
+    
+    .inputPost img {
+        background-color: white;
+        border-radius: 100%;
+        margin-right: 10px;
+        width: 25px;
+        height: 25px;
+    }
+    
+    .article-direction {
+        margin: 8px;
+    }
+    
+    .postButton {
+        background-color: white;
+        border-radius: 4px;
+        color: #4aa8f7;
+    }
+    /*Footer*/
+    
+    footer {
+        align-items: center;
+        justify-content: space-evenly;
+        display: flex;
+        padding: 80px;
+        height: 150px;
+        background-color: #d3d3d3;
+    }
+    
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    a:hover {
+        text-decoration: underline;
+    }
+    
+    @media (max-width: 1400px) {
+        .containerSuggestions {
+            right: 50px;
+            position: absolute;
+            margin-top: 10px;
+        }
+        #containerPosts {
+            margin-left: 230px;
+        }
+        .containerPost {
+            height: 900px;
+            width: 500px;
+        }
+    }
+    
+    @media (max-width: 1300px) {
+        #containerPosts {
+            margin-left: 128px;
+        }
+    }
+    
+    @media (max-width: 1200px) {
+        .containerPost {
+            height: 900px;
+            width: 400px;
+        }
+        .inputPost {
+            width: 300px;
+        }
+    }
+    
+    @media (max-width: 1140px) {
+        .containerIcons {
+            display: none;
+        }
+    }
+    
+    @media (max-width: 1000px) {
+        .containerSuggestions {
+            display: none;
+        }
+    }
+    
+    @media (max-width: 850px) {
+        footer {
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: column;
+            display: flex;
+            height: 200px;
+            word-wrap: break-word;
+        }
+        .law {
+            margin-top: 16px;
+            word-wrap: break-word;
+        }
+        .socialMedia {
+            margin-bottom: 16px;
+            margin-top: 16px;
+        }
+    }
+    
+    @media (max-width: 750px) {
+        .storyPosition {
+            display: none;
+        }
+    }

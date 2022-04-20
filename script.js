@@ -166,3 +166,37 @@ function load() {
 
     if (postsAsText) { posts = JSON.parse(postsAsText); }
 }
+
+
+
+
+function filterNames() {
+    let search = document.getElementById('search').value;
+    search = search.toLowerCase();
+
+    for (let index = 0; index < posts.length; index++) {
+        let name = posts[index];
+
+        if (name.toLowerCase().includes(search))
+            names.innerHTML += /*html*/ `
+        <li>${name}</li>
+        `;
+    }
+}
+
+
+
+/*let names = document.getElementById('');
+    names.innerHTML = ''; 
+    // Suchfunktion
+function showNames() {
+    let names = document.getElementById('');
+    names.innerHTML = '';
+
+    for (let index = 0; index < posts.length; index++) {
+        let name = posts[index];
+
+        
+    }
+
+}*/
