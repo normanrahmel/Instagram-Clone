@@ -181,7 +181,7 @@ function filterNames() {
         let name = posts[index]['author'];
 
         if (name.toLowerCase().includes(search)) {
-            name.innerHTML += /*html*/ `
+            results.innerHTML += /*html*/ `
         <li>${name}</li>
         `;
         }
